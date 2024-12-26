@@ -7,7 +7,9 @@
   "author": "Pedro-jp",
   "license": "MIT",
   "scripts": {
-    "dev": " tsx watch  src/http/server.ts"
+    "dev": " tsx watch  src/http/server.ts",
+    "start": "node dist/http/server.js",
+    "build": "tsc && ./dist"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
