@@ -1,9 +1,9 @@
 {
-  "name": "subi_em_prod",
+  "name": "ta_na_prod",
   "version": "1.0.0",
   "description": "Serviço de aviso",
   "main": "server.js",
-  "repository": "https://github.com/pedro-jp/Atualizei",
+  "repository": "https://github.com/pedro-jp/TaNaProd",
   "author": "Pedro-jp",
   "license": "MIT",
   "scripts": {
