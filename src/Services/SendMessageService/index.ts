@@ -48,7 +48,11 @@ class SendMessageService {
         `https://api.github.com/repos/${this.user}/${this.repo_url}/commits`,
         {
           headers: {
-            Authorization: `token ${process.env.GITHUB_TOKEN}`
+            Authorization: `token ${
+              this.github_api_token !== ''
+                ? this.github_api_token
+                : process.env.GITHUB_TOKEN
+            }`
           }
         }
       );
