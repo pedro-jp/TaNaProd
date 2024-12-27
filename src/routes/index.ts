@@ -1,9 +1,11 @@
 import { Router } from 'express';
 import { SendMessageController } from '../controllers/SendMessageController';
+import { CreateTokenController } from '../controllers/CreateTokenController';
+import { create } from 'axios';
 
 const router = Router();
-const sendMessageController = new SendMessageController();
 
-router.post('/api', sendMessageController.Handle.bind(sendMessageController));
+router.post('/api', new SendMessageController().Handle);
+router.post('/token', new CreateTokenController().Handle);
 
 export { router };

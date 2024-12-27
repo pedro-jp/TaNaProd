@@ -5,19 +5,12 @@ import { Request, Response } from 'express';
 
 class SendMessageController {
   async Handle(req: Request, res: Response) {
-    const { emails, github_api_token, repo_url, user } =
-      req.body as SendMessage;
-
-    const data = {
-      emails,
-      user,
-      repo_url,
-      github_api_token
-    };
+    const { token } = req.body;
 
     const sendMessageService = new SendMessageService();
-    const message = await sendMessageService.Execute(data);
-    res.json(`${message} -  ${date}`);
+    const message = await sendMessageService.Execute(token);
+    message;
+    res.json(`Serviço online -  ${date}`);
   }
 }
 

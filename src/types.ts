@@ -2,27 +2,22 @@ export interface SendMessage {
   emails: string[];
   github_api_token: string;
   repo_url: string;
-  user: UserType;
+  user: string;
 }
 
 interface UserType {
-  email: string;
-  name: string;
   github_username: string;
 }
 
-export interface GitHubCommit {
+export interface CommitType {
   sha: string;
-  node_id: string;
   commit: {
-    author: {
-      name: string;
-      email: string;
+    committer: {
       date: string;
     };
     message: string;
   };
-  author: {
+  committer: {
     login: string;
     avatar_url: string;
   };
